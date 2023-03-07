@@ -4,15 +4,30 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev":"nodemon run app.js",
+    "dev": "nodemon run app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js"
+  },
+
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/panhead63/fantastic-sniffle-quebec.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
+  "bugs": {
+    "url": "https://github.com/panhead63/fantastic-sniffle-quebec/issues"
+  },
+  "homepage": "https://github.com/panhead63/fantastic-sniffle-quebec/blob/main/README.md",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "dotenv": "^16.0.3",
     "ejs": "^3.1.8",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "mongodb": "^4.10.0",
+    "nodemon": "^2.0.20"
   }
+
 }
+

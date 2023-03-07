@@ -1,3 +1,32 @@
 <h1>Hi there, we are in EJS</h1>
 
 <h2> <%=someVar %></h2>
+
+<h3> Favorite Snacks</h3>
+<% for (var i=0; i< snackData.length; i++){ %>
+ <form method="POST" action="/deleteSnack/<%= drinkData[i]._id %>" style="display: inline-block">
+    <% snackData[i].snack_name %> (<% snackData[i].size %>)
+    <input type="submit" value="delete">
+ </form>
+ <br/>
+
+<% } %>
+
+<h3> Update Favorite Snacks </h3>
+<% for (var i=0; i< snackData.length; i++){ %>
+ <form method="POST" action="/updateSnack/<%= drinkData[i]._id %>" style="display: inline-block">
+    <% snackData[i].snack_name %> (<% snackData[i].size %>)
+    <input type="submit" value="update">
+ </form>
+ <br/>
+
+<% } %>
+
+<h3> Add a Favorite Snack</h3>
+<form method="POST" action="/addSnack">
+    <label for="snack_name">Snack</label>
+    <input name="snack_name" value="new snack">
+
+    <br>
+   <input type="submit" value="add a snack" />
+</form>
